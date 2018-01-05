@@ -30,11 +30,14 @@ Create a template via vSphere Client :
 Now you can create -at least- 2 servers based on this template, do this task but don't start it yet.
 
 # Cloud-Config for master node
+
+> **DEPRECATED**: Should be replaced with Ignition and vmware guestinfo metadata
+
 On the VMware datastore, create a directory and initialize config, example :
 
     mkdir -p <path to datastore>/cloud-config/master/openstack/latest/ 
     cd <path to datastore>/cloud-config/master/openstack/latest/
-    wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/docs/getting-started-guides/coreos/cloud-configs/master.yaml && mv master.yaml user_data
+    wget https://raw.githubusercontent.com/kubernetes/website/master/docs/getting-started-guides/coreos/cloud-configs/master.yaml && mv master.yaml user_data
 
 Don't forget to add your ssh_key :
 
@@ -59,11 +62,14 @@ Last step : create an iso :
 	
 	
 # Cloud-Config for minion node
+
+> **DEPRECATED**: Should be replaced with Ignition and vmware guestinfo metadata
+
 On the VMware datastore, create a directory and initialize config, example :
 
 	mkdir -p <path to datastore>/cloud-config/minion/openstack/latest/
 	cd <path to datastore>/cloud-config/minion/openstack/latest/
-	wget https://raw.githubusercontent.com/kubernetes/kubernetes/master/docs/getting-started-guides/coreos/cloud-configs/node.yaml && mv node.yaml user_data
+	wget https://raw.githubusercontent.com/kubernetes/website/master/docs/getting-started-guides/coreos/cloud-configs/node.yaml && mv node.yaml user_data
   
  Don't forget to add your ssh_key :
  
